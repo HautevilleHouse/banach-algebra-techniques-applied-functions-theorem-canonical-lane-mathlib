@@ -1,0 +1,15 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.BanachAlgebraTechniquesAppliedFunctionsTheoremCanonicalLaneLean.BridgeLemmas
+import HautevilleHouse.BanachAlgebraTechniquesAppliedFunctionsTheoremCanonicalLaneLean.GateLemmas
+
+namespace HautevilleHouse
+namespace BanachAlgebraTechniquesAppliedFunctionsTheoremCanonicalLaneLean
+
+def ConstrainedBanachAlgebraAppliedFunctionsClosure (A : BanachAlgebrasAdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_banach_algebra_applied_functions_endgame (A : BanachAlgebrasAdmissibleClass) : ConstrainedBanachAlgebraAppliedFunctionsClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end BanachAlgebraTechniquesAppliedFunctionsTheoremCanonicalLaneLean
+end HautevilleHouse

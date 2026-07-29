@@ -1,0 +1,15 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.BanachAlgebraTechniquesAppliedFunctionsTheoremCanonicalLaneLean.AdmissibleClass
+import HautevilleHouse.BanachAlgebraTechniquesAppliedFunctionsTheoremCanonicalLaneLean.AppliedFunctionsTheorem
+
+namespace HautevilleHouse
+namespace BanachAlgebraTechniquesAppliedFunctionsTheoremCanonicalLaneLean
+
+def bridgeClosed (A : BanachAlgebrasAdmissibleClass) : Prop :=
+  A.object.theoremStatement
+
+theorem bridge_from_admissible_class (A : BanachAlgebrasAdmissibleClass) : bridgeClosed A := by
+  exact A.object.theoremProved
+
+end BanachAlgebraTechniquesAppliedFunctionsTheoremCanonicalLaneLean
+end HautevilleHouse
